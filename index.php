@@ -82,10 +82,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['inputValue'], $_POST[
             <div>
                 <label for="inputType" class="block text-sm font-medium text-gray-700 mb-1">Pilih Format Input</label>
                 <select name="inputType" id="inputType" class="w-full border-gray-300 rounded-md shadow-sm border p-2 focus:ring-blue-500 focus:border-blue-500">
-                    <option value="readera" <?= $inputType == 'readera' ? 'selected' : '' ?>>Reader A (Desimal Utuh)</option>
-                    <option value="hikvision" <?= $inputType == 'hikvision' ? 'selected' : '' ?>>Hikvision 3D-5D (Wiegand 26-bit)</option>
+                    <option value="readera" <?= $inputType == 'readera' ? 'selected' : '' ?>>Reader A (Desimal Utuh) Sticker</option>
+                    <option value="hikvision" <?= $inputType == 'hikvision' ? 'selected' : '' ?>>Hikvision LongRange 3D-5D (Wiegand 26-bit)</option>
                     <option value="hikperson" <?= $inputType == 'hikperson' ? 'selected' : '' ?>>Hik Person (10 Digit Decimal)</option>
-                    <option value="hex" <?= $inputType == 'hex' ? 'selected' : '' ?>>Hexadecimal</option>
+                    <option value="hex" <?= $inputType == 'hex' ? 'selected' : '' ?>>Hexadecimal DSS</option>
                 </select>
             </div>
 
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['inputValue'], $_POST[
                 <!-- Box Hikvision -->
                 <div class="bg-blue-50 p-3 rounded border border-blue-100 flex justify-between items-center">
                     <div>
-                        <span class="text-xs text-blue-500 uppercase font-bold tracking-wider">Hikvision (3D-5D)</span>
+                        <span class="text-xs text-blue-500 uppercase font-bold tracking-wider">Hikvision LongRange (3D-5D)</span>
                         <div class="text-lg font-mono font-semibold text-blue-900"><?= $result['hikvision'] ?></div>
                         <div class="text-xs text-blue-600 mt-1">
                             Facility Code: <strong><?= $result['fc'] ?></strong> &nbsp;|&nbsp; 
@@ -134,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['inputValue'], $_POST[
                 <!-- Box Reader A -->
                 <div class="bg-gray-50 p-3 rounded border flex justify-between items-center">
                     <div>
-                        <span class="text-xs text-gray-500 uppercase font-bold tracking-wider">Reader A (Desimal)</span>
+                        <span class="text-xs text-gray-500 uppercase font-bold tracking-wider">Reader A (Desimal) Sticker RFID</span>
                         <div class="text-lg font-mono font-semibold text-gray-900"><?= $result['readera'] ?></div>
                     </div>
                 </div>
@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['inputValue'], $_POST[
                 <!-- Box Hex -->
                 <div class="bg-gray-50 p-3 rounded border flex justify-between items-center">
                     <div>
-                        <span class="text-xs text-gray-500 uppercase font-bold tracking-wider">Hexadecimal</span>
+                        <span class="text-xs text-gray-500 uppercase font-bold tracking-wider">Hexadecimal DSS</span>
                         <div class="text-lg font-mono font-semibold text-gray-900"><?= $result['hex'] ?></div>
                     </div>
                 </div>
